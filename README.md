@@ -1,7 +1,8 @@
 # RotaTor
 ### Script to rotate through Tor identities, you can add your own code in between.
 
-
+* Usage:
+python rotaTor.py
 
 
 ## Attention:
