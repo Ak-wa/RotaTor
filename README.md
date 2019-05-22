@@ -1,8 +1,9 @@
 # RotaTor
 ### Script to rotate through Tor identities, you can add your own code in between.
+![](rotator.gif)
 
 * Usage:
-python rotaTor.py
+python rotaTor.py  
 
 
 ## Attention:
@@ -17,3 +18,5 @@ if you installed a pre-built package:
 `/etc/tor/torrc or /etc/torrc`  
 fallback location if above file is not found:  
 `$HOME/.torrc` 
+on windows in TorBrowser folder:  
+`\Tor Browser\Browser\TorBrowser\Data\Tor\torrc`
