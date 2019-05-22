@@ -7,7 +7,9 @@
 ![](rotator.gif)
 
 * Usage:
-python rotaTor.py  
+python rotaTor.py 
+* Why is it slow? - Its tor my dood
+* Python 3.x / Tested on v3.7
 
 
 ## Attention:
