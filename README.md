@@ -21,6 +21,6 @@ if you compiled tor from source:
 if you installed a pre-built package:  
 `/etc/tor/torrc or /etc/torrc`  
 fallback location if above file is not found:  
-`$HOME/.torrc` 
+`$HOME/.torrc`  
 on windows in TorBrowser folder:  
 `\Tor Browser\Browser\TorBrowser\Data\Tor\torrc`
