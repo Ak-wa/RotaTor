@@ -1,4 +1,8 @@
 # RotaTor
+![python](https://img.shields.io/pypi/pyversions/Django.svg)
+![size](https://img.shields.io/github/size/ak-wa/RotaTor/rotaTor.py.svg)
+![lastcommit](https://img.shields.io/github/last-commit/ak-wa/RotaTor.svg)
+![follow](https://img.shields.io/github/followers/ak-wa.svg?label=Follow&style=social)
 ### Script to rotate through Tor identities, you can add your own code in between.
 ![](rotator.gif)
 
