@@ -11,7 +11,7 @@
 from rotaTor import Rotator
 rot = Rotator()
 for i in range(3):
-    print("[+] Wuhoo")
+    print("[+] Magic code happens here")
     rot.rotate()
  ```    
 * Why is it slow? - Its tor my dood
