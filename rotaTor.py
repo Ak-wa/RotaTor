@@ -1,37 +1,26 @@
 #!/usr/bin/python
 # for any bugs/issues contact me at github.com/ak-wa
 # woop woop
-try:
-    import socks
-    import socket
-    from time import sleep
-    from stem.control import Controller
-    from stem import Signal
-    from sys import stdout
-    from requests import get
-except ImportError:
-    from os import system
 
-    system('pip install socks')
-    system('pip install stem')
-    system('pip install requests')
-    import socks
-    import socket
-    from time import sleep
-    from stem.control import Controller
-    from stem import Signal
-    from requests import get
+import socks
+import socket
+from time import sleep
+from stem.control import Controller
+from stem import Signal
+from requests import get
 
-with Controller.from_port(port=9051) as controller:
-    controller.authenticate()
-    socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9150)
-    socket.socket = socks.socksocket
-    while 1:
+
+class Rotator:
+    def __init__(self, tor_host="127.0.0.1", tor_port=9150):
+        self.__controller = Controller.from_port(port=9051)
+        self.__tor_host = tor_host
+        self.__tor_port = tor_port
+
+    def rotate(self):
+        self.__controller.authenticate()
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.__tor_host, self.__tor_port)
+        socket.socket = socks.socksocket
         ip_req = get("https://myexternalip.com/raw")
         print("[+] Exit node: %s" % ip_req.text)
-        print("[+] Your code could happen here!")  # You can delete this
-        # Here comes your code, e.g a request to a website
-        #
-        #
-        controller.signal(Signal.NEWNYM)
-        sleep(controller.get_newnym_wait())
+        self.__controller.signal(Signal.NEWNYM)
+        sleep(self.__controller.get_newnym_wait())
