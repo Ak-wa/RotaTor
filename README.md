@@ -16,7 +16,8 @@ for i in range(3):
  ```    
 * Why is it slow? - Its tor my dood
 * Python 3.x / Tested on v3.7
-* Make sure the required modules are installed ;)
+* If modules are missing, install them with 
+`pip install -r requirements.txt`
 
 
 
