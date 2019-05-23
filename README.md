@@ -3,11 +3,17 @@
 ![size](https://img.shields.io/github/size/ak-wa/RotaTor/rotaTor.py.svg)
 ![lastcommit](https://img.shields.io/github/last-commit/ak-wa/RotaTor.svg)
 ![follow](https://img.shields.io/github/followers/ak-wa.svg?label=Follow&style=social)
-### Script to rotate through Tor identities, you can add your own code in between.
+### Python Class for changing the tor identity
 ![](rotator.gif)
 
-* Usage:
-python rotaTor.py 
+* Usage in Code:  
+```python
+from rotaTor import Rotator
+rot = Rotator()
+for i in range(3):
+    print("[+] Wuhoo")
+    rot.rotate()
+ ```    
 * Why is it slow? - Its tor my dood
 * Python 3.x / Tested on v3.7
 * Attempts to install missing modules with pip
