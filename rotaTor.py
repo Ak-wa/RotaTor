@@ -24,6 +24,7 @@ class Rotator:
 
     def get_node(self):
         self.node = get("https://myexternalip.com/raw").text
+        return self.node
 
     def rotate(self):
         self.__controller.authenticate()
