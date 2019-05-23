@@ -22,12 +22,15 @@ class Rotator:
             self.public_ip = get("https://myexternalip.com/raw").text
             print("[+] Your (real) public IP address is:", self.public_ip)
 
+    def get_node(self):
+        self.node = get("https://myexternalip.com/raw").text
+
     def rotate(self):
         self.__controller.authenticate()
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, self.__tor_host, self.__tor_port)
         socket.socket = socks.socksocket
-        self.node = get("https://myexternalip.com/raw").text
         if self.__verbose:
+            self.get_node()
             print("[+] Exit node: %s" % self.node)
         self.__controller.signal(Signal.NEWNYM)
         sleep(self.__controller.get_newnym_wait())
