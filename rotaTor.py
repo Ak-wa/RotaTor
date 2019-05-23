@@ -20,7 +20,7 @@ class Rotator:
 
         if self.__verbose:
             self.public_ip = get("https://myexternalip.com/raw").text
-            print("Your (real) public IP address is:", self.public_ip)
+            print("[+] Your (real) public IP address is:", self.public_ip)
 
     def rotate(self):
         self.__controller.authenticate()
