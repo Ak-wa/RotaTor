@@ -9,11 +9,14 @@
 * Usage in Code:  
 ```python
 from rotaTor import Rotator
-rot = Rotator()
+rot = Rotator(verbose=False)
 for i in range(3):
-    print("[+] Magic code happens here")
     rot.rotate()
+    print(rot.get_node())
  ```    
+ You can get your external IP address(current exit node) with  
+ `get_node()`  
+ and if `verbose=True` it does that automatically for you ; prints it out  
 * Why is it slow? - Its tor my dood
 * Python 3.x / Tested on v3.7
 * If modules are missing, install them with 
