@@ -6,7 +6,7 @@
 ### Python Class for changing the tor identity
 ![](rotator.gif)
 
-* Usage in Code:  
+* Example Usage in Code:  
 ```python
 from rotaTor import Rotator
 rot = Rotator(verbose=False)
