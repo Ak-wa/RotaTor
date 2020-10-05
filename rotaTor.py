@@ -11,7 +11,7 @@ from requests import get
 
 
 class Rotator:
-    def __init__(self, tor_host="127.0.0.1", tor_port=9150, verbose=False):
+    def __init__(self, tor_host="127.0.0.1", tor_port=9050, verbose=False):
         self.__controller = Controller.from_port(port=9051)
         self.__tor_host = tor_host
         self.__tor_port = tor_port
