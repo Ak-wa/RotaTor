@@ -6,6 +6,19 @@
 ### Python Class for changing the tor identity
 ![](rotator.gif)
 
+## Usage in terminal:   
+Terminal 1 (used for starting tor service):   
+```
+tor
+```   
+Terminal 2 (runs the code):
+```
+python3 example.py
+```
+
+
+
+
 * Example Usage in Code:  
 ```python
 from rotaTor import Rotator
@@ -24,7 +37,18 @@ for i in range(3):
 
 
 
-## Attention:
+## Easy Setup:   
+```
+git clone https://github.com/Ak-wa/RotaTor.git
+cd RotaTor/
+apt install tor
+echo -en 'ControlPort 9051\nCookieAuthentication 1' >> /etc/tor/torrc
+
+after that close the terminal; open a new one
+```
+
+
+## Setup breakdown:
 * To make this work, you need to add the following lines to your "torrc" file:  
 `ControlPort 9051`  
 `CookieAuthentication 1`
