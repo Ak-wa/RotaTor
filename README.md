@@ -19,7 +19,8 @@ python3 example.py
 
 
 
-* Example Usage in Code:  
+## Usage in Code:  
+example.py   
 ```python
 from rotaTor import Rotator
 rot = Rotator(verbose=False)
@@ -27,21 +28,19 @@ for i in range(3):
     rot.rotate()
     print(rot.get_node())
  ```    
- You can get your external IP address(current exit node) with  
+ * You can get your external IP address(current exit node) with  
  `get_node()`  
- and if `verbose=True` it does that automatically for you ; prints it out  
-* Why is it slow? - Its tor my dood
-* Python 3.x / Tested on v3.7
-* If modules are missing, install them with 
-`pip install -r requirements.txt`
+ * If called with `verbose=True`, it will do that automatically
+
 
 
 
 ## Easy Setup:   
-```
+```sh
 git clone https://github.com/Ak-wa/RotaTor.git
 cd RotaTor/
 apt install tor
+pip3 install -r requirements.txt
 echo -en 'ControlPort 9051\nCookieAuthentication 1' >> /etc/tor/torrc
 
 after that close the terminal; open a new one
