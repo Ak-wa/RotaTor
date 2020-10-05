@@ -4,7 +4,7 @@
 ![lastcommit](https://img.shields.io/github/last-commit/ak-wa/RotaTor.svg)
 ![follow](https://img.shields.io/github/followers/ak-wa.svg?label=Follow&style=social)
 ### Python Class for changing the tor identity
-![](rotator.gif)
+![](rotator_usage.gif)
 
 ## Usage in terminal:   
 Terminal 1 (used for starting tor service):   
